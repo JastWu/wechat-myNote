@@ -1,0 +1,20 @@
+<form  bindsubmit='updateNoteForm'>
+<view class="cu-form-group margin-top">
+		<view class="title">标题：</view>
+		<input  id="title" name="title" value="{{note.title}}"></input>
+    <input  hidden name="noteid" value="{{note.id}}"></input>
+	</view>
+	<view class="cu-form-group align-start">
+		
+		<textarea  id="content" maxlength="-1" name="content" disabled="{{modalName!=null}}" value="{{note.content}}" ></textarea>
+	</view>
+
+	<view >
+	
+		<button  formType="submit"  class="cu-btn block  margin-tb-sm lg bg-green" style="width: 80%;">
+		 保存</button>
+		
+	</view>
+
+
+</form>
