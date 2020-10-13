@@ -82,7 +82,7 @@
 
 
 
-  <view wx:for="{{noteList}}" wx:for-item="noteList" wx:key="id"  class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view wx:for="{{noteList}}" wx:for-item="noteList" wx:key="id" id="{{noteList.id}}" bindtap="toNoteInfo" class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
     <view class="cu-item {{menuArrow?'arrow':''}}">
       <view class="content">
         <text class="cuIcon-circlefill text-grey"></text>

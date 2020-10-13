@@ -4,8 +4,7 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     Custom: app.globalData.Custom,
-    noteList:[
-  ]
+    noteList:[]
     /*
 {
       "id":1,
@@ -22,66 +21,57 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取用户openid
-    wx.cloud.callFunction({
+   
+  },
+
+  onShow:function(options){
+
+    var user ;
+
+     // 获取用户openid
+     wx.cloud.callFunction({
       name: 'login',
       data: {},
       success: res => {
-        console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
-        
+        console.log('[云函数] [login] user openid: ', res.result.openid);
+        app.globalData.openid = res.result.openid;
+        user = res.result.openid;
+        wx.request({
+          url: 'http://localhost/wechatNoteCtrl/getNote',
+          data: {"userName":user},
+          method:'GET',
+          success:res=>{
+            var result = res.data.result;
+          // this.data.noteList =result;
+           this.setData({
+            noteList: result
+           })
+           
+          }
+        })
+
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
        
       }
     })
+
+    
+
+    
   },
 
-  onShow:function(options){
 
-    /*
-    var userName = '';
-    wx.getUserInfo({
-      success: res => {
-       
-          userName = res.userInfo.nickName;
-        
-      }
-    })
-    */
+  toNoteInfo:function(e){
+      var id = e.currentTarget.id;
 
-    var user = app.globalData.openid;
+      wx.navigateTo({
+        url: '/pages/noteInfo/noteInfo?noteid='+id
+      })
 
-    wx.request({
-      url: 'http://localhost/wechatNoteCtrl/getNote',
-      data: {"userName":user},
-      method:'GET',
-      success:res=>{
-        var result = res.data.result;
-      // this.data.noteList =result;
-       this.setData({
-        noteList: result
-       })
-        /*
-        var notList = dataset.getElementById("noteList");
-        var test = res.result;
-        var view1 ='<view class="cu-list menu ">'
-                    +'<view class="cu-item ">'
-                    +'<view class="content">'
-                    +'<text class="cuIcon-circlefill text-grey"></text>';
-        
-        for(var i = 0 ; i < test.length(); i++ ){
-            var text = '<text class="text-grey">'+test[i].title+'</text>';
-            var end = view1+text+'</view>'
-            +'</view>' 
-          +'</view> ';
-            notList.append(end);
-        }  
-        */
-      }
-    })
   },
+
 
   tabSelect(e) {
     this.setData({
