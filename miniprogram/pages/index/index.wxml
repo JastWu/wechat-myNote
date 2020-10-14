@@ -3,7 +3,7 @@
 <view class="container">
 
    <view class=" cu-avatar round xl margin-left"  style="margin-top:120rpx; background-image:url({{avatarUrl}});">
-    <view class="cu-tag badge {{index%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}"></view>
+   <!-- <view class="cu-tag badge {{index%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}"></view>  -->
   </view>
 
   <text class="user-name">你好,{{nickName}}</text>
