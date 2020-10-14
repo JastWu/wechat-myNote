@@ -64,18 +64,18 @@ Page({
         current: ['http://localhost/img/wechatpay.jpg','http://localhost/img/alipay.jpg']// 当前显示图片的http链接      
       })
     },
-
+    toWrite: function(){
+      wx.navigateTo({
+        url: '/pages/write/write'
+      })
+    },
     //底部导航栏页面索引
     toList: function(){
       wx.navigateTo({
         url: '/pages/list/list'
       })
     },
-    toMyInfo: function(){
-      wx.navigateTo({
-        url: '/pages/myInfo/myInfo'
-      })
-    },
+   
   
 
 })

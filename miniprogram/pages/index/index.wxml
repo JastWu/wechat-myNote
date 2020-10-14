@@ -6,7 +6,7 @@
    <!-- <view class="cu-tag badge {{index%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}"></view>  -->
   </view>
 
-  <text class="user-name">你好,{{nickName}}</text>
+  <text class="user-name">你好  {{nickName}}</text>
   <view class="moto-container" bindtap="tolist">
     <text class="moto">开启小程序之旅</text>
   </view>

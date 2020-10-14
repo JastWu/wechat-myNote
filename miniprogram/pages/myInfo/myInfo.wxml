@@ -1,5 +1,5 @@
 
-<scroll-view scroll-y class="scrollPage">
+
   <view class="UCenter-bg">
     <image src="/images/logo.png" class="png" mode="widthFix"></image>
     <view class="text-xl">我的笔记
@@ -53,8 +53,7 @@
     </view>
     -->
   </view>
-  <view class="cu-tabbar-height"></view>
-</scroll-view>
+
 
 
 
@@ -65,11 +64,11 @@
         </view>
         -->
         <view class="action text-gray" bindtap="toList">
-          <view class="cuIcon-similar"></view> 分类
+          <view class="cuIcon-similar"></view> 列表
         </view>
         <view class="action text-gray add-action" bindtap="toWrite">
           <button class="cu-btn cuIcon-add bg-green shadow"></button>
-          发布
+          写笔记
         </view>
       <!--  <view class="action text-gray">
           <view class="cuIcon-cart">

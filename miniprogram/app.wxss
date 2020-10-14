@@ -7,6 +7,9 @@
   align-items: center;
   box-sizing: border-box;
 } 
+.scrollPage {
+  height: 70vh;
+}
 
 button {
   background: initial;
