@@ -36,17 +36,34 @@ Page({
     })
   },
 
-  onGetUserInfo: function(e) {
-    if (!this.data.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
+    onGetUserInfo: function(e) {
+      if (!this.data.logged && e.detail.userInfo) {
+        this.setData({
+          logged: true,
+          avatarUrl: e.detail.userInfo.avatarUrl,
+          userInfo: e.detail.userInfo
+        })
+      }
+    },
+
+    CopyLink(e) {
+      wx.setClipboardData({
+        data: e.currentTarget.dataset.link,
+        success: res => {
+          wx.showToast({
+            title: '地址已复制',
+            duration: 1000,
+          })
+        }
       })
-    }
-  },
+    },
 
-
+    showQrcode() {
+      wx.previewImage({
+        urls: ['http://localhost/img/wechatpay.jpg','http://localhost/img/alipay.jpg'],
+        current: ['http://localhost/img/wechatpay.jpg','http://localhost/img/alipay.jpg']// 当前显示图片的http链接      
+      })
+    },
 
     //底部导航栏页面索引
     toList: function(){
@@ -59,6 +76,6 @@ Page({
         url: '/pages/myInfo/myInfo'
       })
     },
-
+  
 
 })

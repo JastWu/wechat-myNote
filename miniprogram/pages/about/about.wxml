@@ -1,0 +1,11 @@
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于我的笔记</view>
+  <view class='text-content'>
+    <view>Hi！~欢迎使用我的笔记！</view>
+    <view class='margin-top-sm'>该项目是我个人开发的一款方便个人笔记的微信小程序。这个项目目前仅有一些简单的功能。后续我也会不定期更新一些新的功能以及优化，或者你有一些好的想法可以在GitHub里提交给我，我会加入到扩展里。</view>
+    <view class='margin-top-sm'>项目目前是开源的，不收取任何费用，如果这个项目有帮到你，或者你觉得很赞，可以赞赏支持一下！</view>
+    <view class='margin-top-sm'>该项目中参考使用了很多github中开源大神@文晓港的代码，感谢大神的ColorUI组件库！</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

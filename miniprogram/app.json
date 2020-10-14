@@ -17,7 +17,8 @@
     "pages/myInfo/myInfo",
     "pages/foot/foot",
     "pages/write/write",
-    "pages/noteInfo/noteInfo"
+    "pages/noteInfo/noteInfo",
+    "pages/about/about"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -8,18 +8,18 @@
     <view class="margin-top-sm">
       <text>By:吴祥祥</text>
     </view>
-    <image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+    
   </view>
   
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/JastWu/wechat-myNote">
         <text class="cuIcon-github text-grey"></text>
         <text class="text-grey">GitHub</text>
       </view>
     </view>
     <view class="cu-item arrow">
-      <navigator class="content" url="/pages/about/about/about" hover-class="none">
+      <navigator class="content" url="/pages/about/about" hover-class="none">
         <image src="/images/logo.png" class="png" mode="aspectFit"></image>
         <text class="text-grey">关于我的笔记</text>
       </navigator>
